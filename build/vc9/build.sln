@@ -6,6 +6,10 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sample_usage", "sample_usage\sample_usage.vcproj", "{AC9971E1-EC4E-42FD-8890-A7C5317A9024}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "build", "build\build.vcproj", "{D36594DA-DB09-4529-B27D-698F7CAE622F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ADFDA900-6A3A-440E-9056-09EA90CB8C48} = {ADFDA900-6A3A-440E-9056-09EA90CB8C48}
+		{AC9971E1-EC4E-42FD-8890-A7C5317A9024} = {AC9971E1-EC4E-42FD-8890-A7C5317A9024}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
