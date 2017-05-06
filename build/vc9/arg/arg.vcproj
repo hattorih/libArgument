@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="utvl_arg"
+	Name="arg"
 	ProjectGUID="{ADFDA900-6A3A-440E-9056-09EA90CB8C48}"
-	RootNamespace="libArgument"
+	RootNamespace="arg"
 	TargetFrameworkVersion="196608"
 	>
 	<Platforms>
@@ -61,6 +61,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
+				OutputFile="$(OutDir)\utvl_$(ProjectName).lib"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -122,6 +123,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
+				OutputFile="$(OutDir)\utvl_$(ProjectName).lib"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -183,6 +185,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
+				OutputFile="$(OutDir)\utvl_$(ProjectName).lib"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -245,6 +248,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
+				OutputFile="$(OutDir)\utvl_$(ProjectName).lib"
 			/>
 			<Tool
 				Name="VCALinkTool"

@@ -131,14 +131,12 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ProjectReference Include="..\utvl_arg\utvl_arg.vcxproj">
-      <Project>{adfda900-6a3a-440e-9056-09ea90cb8c48}</Project>
-      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
-      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
-    </ProjectReference>
+    <ClCompile Include="..\..\..\src\sample\sample_usage\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\src\sample\sample_usage\main.cpp" />
+    <ProjectReference Include="..\arg\arg.vcxproj">
+      <Project>{adfda900-6a3a-440e-9056-09ea90cb8c48}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
