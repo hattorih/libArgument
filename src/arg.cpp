@@ -5,6 +5,8 @@
 #include <sstream>
 #include <algorithm>
 
+#include <windows.h>
+
 
 #define STR_TO_INT(X) (       atoi((X).c_str()))
 #define STR_TO_FLT(X) ((float)atof((X).c_str()))
@@ -28,6 +30,24 @@ std::string to_str(const T& t)
 #define BOOL_TO_STR(X) ((X) ? "true" : "false")
 
 #define DEFAULT_TAG " "
+
+
+static void CHANGE_COLOR_TO_CYAN(void)
+{
+	HANDLE hCons = GetStdHandle(STD_OUTPUT_HANDLE);
+	WORD attr = FOREGROUND_INTENSITY | FOREGROUND_GREEN | FOREGROUND_BLUE;
+
+	SetConsoleTextAttribute(hCons, attr);
+}
+
+
+static void CHANGE_COLOR_TO_WHITE(void)
+{
+	HANDLE hCons = GetStdHandle(STD_OUTPUT_HANDLE);
+	WORD attr = FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE;
+
+	SetConsoleTextAttribute(hCons, attr);
+}
 
 
 // ëOå„ÇÃãÛîíÇèúãéÇ∑ÇÈ
@@ -432,6 +452,8 @@ void Argument::print (void)
 	for (unsigned int i=0; i<mValue.size(); i++)
 		value_max = std::max<size_t>(value_max, mValue[i].size());
 
+	CHANGE_COLOR_TO_CYAN();
+
 	for (unsigned int i=0; i<mName.size() + 1; i++)
 	{
 		const std::string tag = i==0 ? " " : mTag[temp[i-1].second];
@@ -452,6 +474,8 @@ void Argument::print (void)
 		
 		std::cout << " | " << std::endl;
 	}
+
+	CHANGE_COLOR_TO_WHITE();
 }
 
 

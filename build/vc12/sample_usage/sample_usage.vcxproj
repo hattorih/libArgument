@@ -134,7 +134,7 @@
     <ClCompile Include="..\..\..\src\sample\sample_usage\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\arg\arg.vcxproj">
+    <ProjectReference Include="..\utvl_arg\utvl_arg.vcxproj">
       <Project>{adfda900-6a3a-440e-9056-09ea90cb8c48}</Project>
     </ProjectReference>
   </ItemGroup>
